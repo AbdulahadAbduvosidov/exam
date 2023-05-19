@@ -321,7 +321,7 @@ const deleteStudent = (studentId) => {
                   new Date().getFullYear()
                 }}
               </td>
-              <td class="text-center text-graty-500 font-bold">1234</td>
+              <td class="text-center text-graty-500 font-bold">7777</td>
               <td class="text-center text-gray-500 text-[25px]">
                 <button @click="deleteStudent(el.id)"
                   class="w-[40px] focus:ring-4 focus:ring-blue-300 border-white border-2 hover:border-2 hover:border-[#4D44B5] rounded-[8px] mr-3"

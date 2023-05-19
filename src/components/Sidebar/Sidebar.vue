@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="sidebar w-[299px] shadow-lg min-h-screen relative bg-indigo-600">
+    <div class="sidebar w-[299px] shadow-lg min-h-screen relative bg-indigo-900">
         <div class="flex pt-10 justify-center items-center">
         <h1 class="px-2 py-1 text-white rounded-xl text-center inline-block w-[48px] h-[48px] text-3xl font-bold bg-red-500">A</h1>
             <a href="/" class="logo inline-block text-center ml-4 text-white text-4xl font-bold">Academy</a>
