@@ -135,7 +135,7 @@ const addTeacher = () => {
               <label
                 for="first_name"
                 class="block mb-2 text-xl font-medium text-gray-500"
-                >Ism <span class="text-red-600">*</span></label>
+                >Ism <span class="">*</span></label>
               <input
                 v-model="teachers.first_name"
                 type="first_name"
@@ -150,7 +150,7 @@ const addTeacher = () => {
               <label
                 for="last_name"
                 class="block mb-2 text-xl font-medium text-gray-500"
-                >Familiyasi <span class="text-red-600">*</span></label>
+                >Familiyasi <span class="">*</span></label>
                 <input
                 v-model="teachers.last_name"
                 type="last_name"
@@ -164,7 +164,7 @@ const addTeacher = () => {
             <div class="mb-3">
               <label for="login"
               class="block mb-2 text-xl font-medium text-gray-500"
-                >Login <span class="text-red-600">*</span></label>
+                >Login <span class="">*</span></label>
                 <input
                 v-model="teachers.login"
                 type="username"
@@ -179,7 +179,7 @@ const addTeacher = () => {
               <label
                 for="password"
                 class="block mb-2 text-xl font-medium text-gray-500"
-                >Parol <span class="text-red-600">*</span></label>
+                >Parol <span class="">*</span></label>
               <input
                 v-model="teachers.password"
                 type="password"
@@ -193,7 +193,7 @@ const addTeacher = () => {
             <div class="mb-3">
               <label for="info" 
               class="block mb-2 text-xl font-medium text-gray-500"
-                >Ma`lumot <span class="text-red-600">*</span></label>
+                >Ma`lumot <span class="">*</span></label>
               <textarea
                 v-model="teachers.info"
                 name="info"
@@ -205,7 +205,7 @@ const addTeacher = () => {
             </div>
             <div>
               <label for="image" class="block mb-2 text-xl font-medium text-gray-500"
-              >Rasm <span class="text-red-600">*</span></label>
+              >Rasm <span class="">*</span></label>
               <input
               type="text"
               name="image"
@@ -220,7 +220,7 @@ const addTeacher = () => {
               <label
                 for="birthday"
                 class="block mb-2 text-xl font-medium text-gray-500"
-                >Tug'ilgan sanasi <span class="text-red-600">*</span></label>
+                >Tug'ilgan sanasi <span class="">*</span></label>
               <input
                 v-model="teachers.birthday"
                 type="text"
@@ -234,7 +234,7 @@ const addTeacher = () => {
 
             <div>
               <label for="group" class="block mb-2 text-xl font-medium text-gray-500"
-              >Guruhni tanlang <span class="text-red-600">*</span></label>
+              >Guruhni tanlang <span class="">*</span></label>
               <input
                 v-model="teachers.group"
                 type="text"
