@@ -143,15 +143,15 @@ const deleteStudent = (studentId) => {
           
           <div class="flex">
             <div class="md">
-            <label for="image" class="block ml-4  font-bold text-gray-500"
-              >Rasmi <span class="font-bold text-red-700">*</span></label
+            <label for="image" class="block  font-bold text-gray-500 ml-9"
+              >Rasmi <span class="font-bold">*</span></label
             >
             <input
               type="text"
               name="image"
               id="image"
-              class="bg-gray-200 border border-dashed text-[#A098AE] text-sm rounded-xl ml-4 mt-2 w-[100px] h-[100px] p-7"
-              placeholder=" Rasm"
+              class="bg-gray-200 border border-dashed text-[#A098AE] text-sm rounded-xl mt-2 w-[100px] h-[100px] p-7 ml-9"
+              placeholder="Rasm"
               required=""
             />
           </div>
@@ -159,7 +159,7 @@ const deleteStudent = (studentId) => {
             <label
               for="first_name"
               class="block ml-4  font-bold text-gray-500"
-              >Ism <span class="font-bold text-red-700">*</span></label
+              >Ism <span class="font-bold">*</span></label
             >
             <input
               v-model="students.first_name"
@@ -175,7 +175,7 @@ const deleteStudent = (studentId) => {
             <label
               for="last_name"
               class="block ml-10  font-bold text-gray-500"
-              >Familiyasi <span class="font-bold text-red-700">*</span></label
+              >Familiyasi <span class="font-bold">*</span></label
             >
              <input
               v-model="students.last_name"
@@ -194,7 +194,7 @@ const deleteStudent = (studentId) => {
               <label
                 for="birthday"
                 class="block ml-10  font-bold text-gray-500"
-              >Tug'ilgan sanasi <span class="font-bold text-red-700">*</span></label
+              >Tug'ilgan sanasi <span class="font-bold">*</span></label
               >
               <input
                 v-model="students.birthday"
@@ -208,7 +208,7 @@ const deleteStudent = (studentId) => {
             </div>
             <div>
               <label for="group" class="block ml-10  font-bold text-gray-500"
-              >Guruhini kiriting <span class="font-bold text-red-700">*</span></label
+              >Guruhini kiriting <span class="font-bold">*</span></label
               >
               <input
                 v-model="students.group"
@@ -225,7 +225,7 @@ const deleteStudent = (studentId) => {
         <div class="flex mt-10">
           <div class="md ml-32">
             <label for="login" class="block ml-10  font-bold text-gray-500"
-            >Login <span class="font-bold text-red-700">*</span></label
+            >Login <span class="font-bold">*</span></label
             >
             <input
               v-model="students.login"
@@ -241,7 +241,7 @@ const deleteStudent = (studentId) => {
             <label
               for="password"
               class="block ml-10  font-bold text-gray-500"
-                >Parol <span class="font-bold text-red-700">*</span></label
+                >Parol <span class="font-bold">*</span></label
             >
             <input
               v-model="students.password"

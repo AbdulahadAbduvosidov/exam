@@ -25,7 +25,7 @@
             </router-link>
           </div>
             <div class="mt-20 ml-20 rounded-l-full font-bold p-4 block my-2 text-white hover:bg-white hover:text-black duration-100">
-                <a href="/" class="m-auto font-bold">Chiqish><i class='bx bx-log-out ms-20'></i></a></div>
+                <a href="/" class="m-auto font-bold">Orqaga<i class='bx bx-log-out ms-20'></i></a></div>
     </div>
 </template>
 
