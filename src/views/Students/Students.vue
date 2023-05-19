@@ -306,7 +306,7 @@ const deleteStudent = (studentId) => {
                 <input class="w-[20px] h-[20px]" type="checkbox" />
               </td>
               <th scope="row" class="px-4 py-3 flex items-center gap-5">
-                <img class="w-[45px] h-[45px] object-cover rounded-full mt-2" src="https://media.npr.org/assets/img/2019/09/18/freshair2_wide-8d4da2ac591bba71c0901ce4423f08d050558940-s1100-c50.jpg" alt="" />
+                <img class="w-[45px] h-[45px] object-cover rounded-full mt-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVKP3KP5tHHNXkanX-BKWxt4AH2O12TbBPQ&usqp=CAU" alt="" />
                 <div class="w-[150px] h-[38px]">
                   <p class="text-gray-500 font-bold">{{ el.first_name }}</p>
                   <p class="text-gray-500 font-bold">{{ el.last_name }}</p>
