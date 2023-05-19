@@ -31,7 +31,7 @@ const addStudent = () => {
 
   store.ADD(student);
 
-  
+
   toast.success("Successfully!", {
     autoClose: 1000,
     theme: "light",
@@ -44,9 +44,9 @@ const addStudent = () => {
   students.group = "";
   students.login = "";
   students.password = "";
-  
+
   toggleModal();
-  
+
 };
 const deleteStudent = (studentId) => {
   store.REMOVE_STUDENT(studentId);
@@ -54,219 +54,148 @@ const deleteStudent = (studentId) => {
 </script>
 
 <template>
-  <div class="flex justify-center items-center" >
+  <div class="flex justify-center items-center">
     <div class="w-[900px] rounded-xl">
       <header>
-          <nav class="flex justify-between w-full items-center pe-4">
-            <router-link to="/students" class="logo ms-10 text-center text-2xl p-3 block text-blue-900 font-bold">O'quvchilar</router-link>
-          </nav>
-        </header>
+        <nav class="flex justify-between w-full items-center pe-4">
+          <router-link to="/students"
+            class="logo ms-10 text-center text-2xl p-3 block text-blue-900 font-bold">O'quvchilar</router-link>
+        </nav>
+      </header>
     </div>
     <div class="w-[300px] pr-4">
       <header>
-          <nav class="flex justify-between w-full items-center ">
-              <a href="#"><i class='bx bx-bell text-gray-500 text-3xl ml-3'></i></a>
-              <div class="relative">
-                <svg class="h-3 w-3" viewBox="0 0 24 24">
-                </svg>
-                  <span class="absolute right-6 bottom-4 h-2 w-2 bg-blue-500 rounded-full"></span>
-              </div>
-            <a href="#"><i class='bx bx-cog text-gray-500 text-3xl mr-9'></i></a>
-            <div>
-              <h1 class="text-center font-bold text-indigo-900">Ochilov. M</h1>
-                    <p class="text-center text-gray-500 text-[12px]">Admin</p>
-            </div>
-            <div class="w-[45px]">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyevlzwKUcvZNN7BiimV8OF2Jio_1uBzhWKA&usqp=CAU" alt="Ochilov. M" class="rounded-full object-cover">
-            </div>
-          </nav>
-        </header>
-      </div>
-  </div>
-  <div class="flex justify-center items-center mt-5" >
-    <div class="w-[900px] rounded-xl">
-      <header>
-          <nav class="flex justify-between w-full items-center pe-4">
-            <div class="flex w-[170px] relative ml-10 mt-5 ">
-              <i class='bx bx-search-alt-2 text-2xl mt-1 ml-2 absolute text-gray-400 '></i>
-              <input type="text" class="pl-10 p-2 rounded-full" placeholder="izlash">
+        <nav class="flex justify-between w-full items-center ">
+          <a href="#"><i class='bx bx-bell text-gray-500 text-3xl ml-3'></i></a>
+          <div class="relative">
+            <svg class="h-3 w-3" viewBox="0 0 24 24">
+            </svg>
+            <span class="absolute right-6 bottom-4 h-2 w-2 bg-blue-500 rounded-full"></span>
           </div>
-          </nav>
-        </header>
+          <a href="#"><i class='bx bx-cog text-gray-500 text-3xl mr-9'></i></a>
+          <div>
+            <h1 class="text-center font-bold text-indigo-900">Ochilov. M</h1>
+            <p class="text-center text-gray-500 text-[12px]">Admin</p>
+          </div>
+          <div class="w-[45px]">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyevlzwKUcvZNN7BiimV8OF2Jio_1uBzhWKA&usqp=CAU"
+              alt="Ochilov. M" class="rounded-full object-cover">
+          </div>
+        </nav>
+      </header>
+    </div>
+  </div>
+  <div class="flex justify-center items-center mt-5">
+    <div class="w-[900px] rounded-xl">
+      <header>
+        <nav class="flex justify-between w-full items-center pe-4">
+          <div class="flex w-[170px] relative ml-10 mt-5 ">
+            <i class='bx bx-search-alt-2 text-2xl mt-1 ml-2 absolute text-gray-400 '></i>
+            <input type="text" class="pl-10 p-2 rounded-full" placeholder="izlash">
+          </div>
+        </nav>
+      </header>
     </div>
     <div class="w-[300px] pr-4">
       <header>
-          <nav class="flex justify-between w-full items-end ">
-              <button @click="toggleModal" class="bg-indigo-800 w-[200px] ml-24 pb-2 rounded-3xl text-white font-bold text-3xl hover:bg-violet-900 focus:ring-4 ring-2">+</button>
-          </nav>
-        </header>
-      </div>
+        <nav class="flex justify-between w-full items-end ">
+          <button @click="toggleModal"
+            class="bg-indigo-800 w-[200px] ml-24 pb-2 rounded-3xl text-white font-bold text-3xl hover:bg-violet-900 focus:ring-4 ring-2">+</button>
+        </nav>
+      </header>
+    </div>
   </div>
   <!------------------------------------------------ Modal Start - ----------------------------------->
 
-  <div
-    tabindex="-1"
-    aria-hidden="true"
-    :class="
-      modal
-        ? 'overflow-y-auto flex bg-[rgba(0,0,0,0.4)] overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full'
-        : 'hidden'
-    "
-  >
+  <div tabindex="-1" aria-hidden="true" :class="modal
+    ? 'overflow-y-auto flex bg-[rgba(0,0,0,0.4)] overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full'
+    : 'hidden'
+    ">
     <div class="relative p-4">
       <div class="relative bg-white rounded-[20px] shadow-lg w-[1000px] h-[550px]">
-        <div
-          class="flex justify-between items-center p-4 pl-10 sm:mb-5 bg-[#4D44B5] rounded-t-[20px]"
-        >
+        <div class="flex justify-between items-center p-4 pl-10 sm:mb-5 bg-[#4D44B5] rounded-t-[20px]">
           <h3 class="text-[24px] font-bold text-white">O'quvchi ma`lumotlari</h3>
-          <button
-            @click="toggleModal"
-            type="button"
-            class="text-white bg-transparent hover:bg-white hover:text-[#4D44B5] rounded-lg p-1.5"
-          >
-            <svg
-              aria-hidden=""
-              class="w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
+          <button @click="toggleModal" type="button"
+            class="text-white bg-transparent hover:bg-white hover:text-[#4D44B5] rounded-lg p-1.5">
+            <svg aria-hidden="" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
                 d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
+                clip-rule="evenodd"></path>
             </svg>
           </button>
         </div>
         <form @submit.prevent="addStudent">
-          
+
           <div class="flex">
             <div class="md">
-            <label for="image" class="block  font-bold text-gray-500 ml-9"
-              >Rasmi <span class="font-bold">*</span></label
-            >
-            <input
-              type="text"
-              name="image"
-              id="image"
-              class="bg-gray-200 border border-dashed text-[#A098AE] text-sm rounded-xl mt-2 w-[100px] h-[100px] p-7 ml-9"
-              placeholder="Rasm"
-              required=""
-            />
-          </div>
-          <div class="md ml-10">
-            <label
-              for="first_name"
-              class="block ml-4  font-bold text-gray-500"
-              >Ism <span class="font-bold">*</span></label
-            >
-            <input
-              v-model="students.first_name"
-              type="first_name"
-              name="first_name"
-              id="first_name"
-              class="bg-[#FFFFFF] border mt-2 ml-3 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
-              placeholder="Ismi"
-              required=""
-            />
-          </div>
-          <div class="md">
-            <label
-              for="last_name"
-              class="block ml-10  font-bold text-gray-500"
-              >Familiyasi <span class="font-bold">*</span></label
-            >
-             <input
-              v-model="students.last_name"
-              type="last_name"
-              name="last_name"
-              id="last_name"
-              class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
-              placeholder="Familiyasi"
-              required=""
-            />
-          </div>
-        </div>
-        <!-- =============================== -->
-        <div class="flex">
-          <div class="md ml-32">
-              <label
-                for="birthday"
-                class="block ml-10  font-bold text-gray-500"
-              >Tug'ilgan sanasi <span class="font-bold">*</span></label
-              >
-              <input
-                v-model="students.birthday"
-                type="text"
-                name="birthday"
-                id="birthday"
+              <label for="image" class="block  font-bold text-gray-500 ml-9">Rasmi <span
+                  class="font-bold">*</span></label>
+              <input type="text" name="image" id="image"
+                class="bg-gray-200 border border-dashed text-[#A098AE] text-sm rounded-xl mt-2 w-[100px] h-[100px] p-7 ml-9"
+                placeholder="Rasm" required="" />
+            </div>
+            <div class="md ml-10">
+              <label for="first_name" class="block ml-4  font-bold text-gray-500">Ism <span
+                  class="font-bold">*</span></label>
+              <input v-model="students.first_name" type="first_name" name="first_name" id="first_name"
+                class="bg-[#FFFFFF] border mt-2 ml-3 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
+                placeholder="Ismi" required="" />
+            </div>
+            <div class="md">
+              <label for="last_name" class="block ml-10  font-bold text-gray-500">Familiyasi <span
+                  class="font-bold">*</span></label>
+              <input v-model="students.last_name" type="last_name" name="last_name" id="last_name"
                 class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
-                placeholder="24 February 1997"
-                required=""
-              />
+                placeholder="Familiyasi" required="" />
+            </div>
+          </div>
+          <!-- =============================== -->
+          <div class="flex">
+            <div class="md ml-32">
+              <label for="birthday" class="block ml-10  font-bold text-gray-500">Tug'ilgan sanasi <span
+                  class="font-bold">*</span></label>
+              <input v-model="students.birthday" type="text" name="birthday" id="birthday"
+                class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
+                placeholder="24 February 1997" required="" />
             </div>
             <div>
-              <label for="group" class="block ml-10  font-bold text-gray-500"
-              >Guruhini kiriting <span class="font-bold">*</span></label
-              >
-              <input
-                v-model="students.group"
-                type="text"
-                name="group"
-                id="group"
+              <label for="group" class="block ml-10  font-bold text-gray-500">Guruhini kiriting <span
+                  class="font-bold">*</span></label>
+              <input v-model="students.group" type="text" name="group" id="group"
                 class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
-                placeholder="Guruhini kiriting"
-                required=""
-              />
+                placeholder="Guruhini kiriting" required="" />
             </div>
-        </div>
+          </div>
           <!-- =============== -->
-        <div class="flex mt-10">
-          <div class="md ml-32">
-            <label for="login" class="block ml-10  font-bold text-gray-500"
-            >Login <span class="font-bold">*</span></label
-            >
-            <input
-              v-model="students.login"
-              type="username"
-              name="login"
-              id="login"
-              class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
-              placeholder="Login kiriting"
-              required=""
-            />
+          <div class="flex mt-10">
+            <div class="md ml-32">
+              <label for="login" class="block ml-10  font-bold text-gray-500">Login <span
+                  class="font-bold">*</span></label>
+              <input v-model="students.login" type="username" name="login" id="login"
+                class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
+                placeholder="Login kiriting" required="" />
+            </div>
+            <div>
+              <label for="password" class="block ml-10  font-bold text-gray-500">Parol <span
+                  class="font-bold">*</span></label>
+              <input v-model="students.password" type="password" name="password" id="password"
+                class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
+                placeholder="**********" required="" />
+            </div>
           </div>
-          <div>
-            <label
-              for="password"
-              class="block ml-10  font-bold text-gray-500"
-                >Parol <span class="font-bold">*</span></label
-            >
-            <input
-              v-model="students.password"
-              type="password"
-              name="password"
-              id="password"
-              class="bg-[#FFFFFF] border mt-2 ml-10 border-gray-500 text-black  text-sm rounded-[5px] block w-[350px] h-[40px] p-2.5"
-              placeholder="**********"
-              required=""
-            />
+          <!-- ===================== -->
+          <div class="mt-16 ">
+            <p class="text-end mr-10"><button type="submit"
+                class="py-3 w-[100px]  text-white bg-indigo-800 font-bold hover:bg-blue-900  focus:ring-4 focus:ring-blue-300 rounded-full">
+                Qo'shish
+              </button></p>
           </div>
-        </div>
-        <!-- ===================== -->
-        <div class="mt-16 ">
-          <p class="text-end mr-10"><button
-            type="submit"
-            class="py-3 w-[100px]  text-white bg-indigo-800 font-bold hover:bg-blue-900  focus:ring-4 focus:ring-blue-300 rounded-full">
-            Qo'shish
-          </button></p>
-        </div>
         </form>
       </div>
     </div>
   </div>
-      
+
   <!-- --------------------------------------------- Model End ------------------------------------ -->
   <!-- ============================================================================================ -->
 
@@ -306,7 +235,9 @@ const deleteStudent = (studentId) => {
                 <input class="w-[20px] h-[20px]" type="checkbox" />
               </td>
               <th scope="row" class="px-4 py-3 flex items-center gap-5">
-                <img class="w-[45px] h-[45px] object-cover rounded-full mt-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVKP3KP5tHHNXkanX-BKWxt4AH2O12TbBPQ&usqp=CAU" alt="" />
+                <img class="w-[45px] h-[45px] object-cover rounded-full mt-2"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtVKP3KP5tHHNXkanX-BKWxt4AH2O12TbBPQ&usqp=CAU"
+                  alt="" />
                 <div class="w-[150px] h-[38px]">
                   <p class="text-gray-500 font-bold">{{ el.first_name }}</p>
                   <p class="text-gray-500 font-bold">{{ el.last_name }}</p>
@@ -324,13 +255,11 @@ const deleteStudent = (studentId) => {
               <td class="text-center text-graty-500 font-bold">7777</td>
               <td class="text-center text-gray-500 text-[25px]">
                 <button @click="deleteStudent(el.id)"
-                  class="w-[40px] focus:ring-4 focus:ring-blue-300 border-white border-2 hover:border-2 hover:border-[#4D44B5] rounded-[8px] mr-3"
-                >
+                  class="w-[40px] focus:ring-4 focus:ring-blue-300 border-white border-2 hover:border-2 hover:border-[#4D44B5] rounded-[8px] mr-3">
                   <i class="bx bx-trash text-red-600"></i>
                 </button>
-                <button 
-                  class="w-[40px] focus:ring-4 focus:ring-blue-300 border-white border-2 hover:border-2 hover:border-[#4D44B5] rounded-[8px]"
-                >
+                <button
+                  class="w-[40px] focus:ring-4 focus:ring-blue-300 border-white border-2 hover:border-2 hover:border-[#4D44B5] rounded-[8px]">
                   <i class="bx bxs-edit text-blue-800"></i>
                 </button>
               </td>
@@ -340,10 +269,8 @@ const deleteStudent = (studentId) => {
         <nav class="border-b bg-white px-4 py-3" aria-label="Table navigation">
           <ul class="flex justify-between items-center">
             <li>
-              <a
-                href="#"
-                class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-[8px] border border-gray-300 hover:border-[#4D44B5] hover:text-[#4D44B5] focus:ring-2 focus:ring-blue-300"
-              >
+              <a href="#"
+                class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-[8px] border border-gray-300 hover:border-[#4D44B5] hover:text-[#4D44B5] focus:ring-2 focus:ring-blue-300">
                 <span class="text-[12px]">avvalgisi</span>
               </a>
             </li>
@@ -356,10 +283,8 @@ const deleteStudent = (studentId) => {
             </span>
 
             <li>
-              <a
-                href="#"
-                class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-[8px] border border-gray-300 hover:border-[#4D44B5] hover:text-[#4D44B5] focus:ring-2 focus:ring-blue-300"
-              >
+              <a href="#"
+                class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-[8px] border border-gray-300 hover:border-[#4D44B5] hover:text-[#4D44B5] focus:ring-2 focus:ring-blue-300">
                 <span class="text-[12px]">keyingisi</span>
               </a>
             </li>
@@ -370,8 +295,6 @@ const deleteStudent = (studentId) => {
   </section>
 
   <!-- --------------------------------------------- Students End --------------------------------- -->
-
- 
 </template>
 
 <style scoped></style>

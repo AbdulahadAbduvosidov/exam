@@ -10,5 +10,5 @@ import Footer from '../components/Footer/Footer.vue';
       <router-view></router-view>
     </section>
   </main>
-  <Footer/>
+  <Footer />
 </template>

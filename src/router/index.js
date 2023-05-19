@@ -22,14 +22,14 @@ const router = createRouter({
         {
           path: '/teachers',
           name: 'teachers',
-          component: () => import ('../views/Teachers/Teachers.vue'),
-      }
+          component: () => import('../views/Teachers/Teachers.vue'),
+        }
       ]
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'error',
-      component: () => import ('../views/Error/Error.vue')
+      component: () => import('../views/Error/Error.vue')
     }
   ]
 })

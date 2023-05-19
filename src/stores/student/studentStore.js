@@ -10,15 +10,15 @@ export const studentStore = defineStore('student', () => {
 
 
   const REMOVE_STUDENT = (id) => {
-    
-    state.list.forEach((el, index)=> {
-        if(el.id == id){
-            state.list.splice(index, 1)
-            return
-        }
+
+    state.list.forEach((el, index) => {
+      if (el.id == id) {
+        state.list.splice(index, 1)
+        return
+      }
     })
   }
-  
+
   const LIST = computed(() => state.list)
 
   return { LIST, ADD, REMOVE_STUDENT }
